@@ -27,8 +27,8 @@ class TestTeam < MiniTest::Test
   end
 
   def test_add_team_player(new_player)
+     number_of_players = @team.players.count
      @team.add_player("Joey jo jo")
-     assert_equal(["Billy Bob","Jimmy Jenkins","Jazzy Jeff","Lou Hunter","Joey jo jo"],@team.add_player)
-
+         assert_equal(number_of_players + 1, @team.players.count)
   end
 end
