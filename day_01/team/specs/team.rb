@@ -10,7 +10,7 @@ class Team
   end
 
   def add_player (new_player)
-    return @team.push(new_player)
+    return @players.push(new_player)
   end
 end
 

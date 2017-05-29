@@ -4,8 +4,6 @@ require("Minitest/rg")
 class TestTeam < MiniTest::Test
   def setup
 
-  @new_player = ["Joey jo jo"]
-
   @team = Team.new("Blazers",["Billy Bob", "Jimmy Jenkins","Jazzy Jeff","Lou Hunter"],"John Anderson")
   end
 
@@ -26,7 +24,7 @@ class TestTeam < MiniTest::Test
     assert_equal("John Anderson",@team.coach)
   end
 
-  def test_add_team_player(new_player)
+  def test_add_team_player
      number_of_players = @team.players.count
      @team.add_player("Joey jo jo")
          assert_equal(number_of_players + 1, @team.players.count)
